@@ -8,8 +8,8 @@ public class RandomizePeople : MonoBehaviour
     [SerializeField] private List<string> personalities = new List<string>();
     [SerializeField] private List<Texture2D> images = new List<Texture2D>();
 
-    [SerializeField] private List<Texture2D> leftEyes = new List<Texture2D>();
-    [SerializeField] private List<Texture2D> rightEyes = new List<Texture2D>();
+    [SerializeField] private List<Texture2D> eyes = new List<Texture2D>();
+    [SerializeField] private List<Texture2D> jackets = new List<Texture2D>();
     private List<People.Imigrant> imigrants = new List<People.Imigrant>();
 
     [SerializeField] private float immigrantAmount;
@@ -32,10 +32,10 @@ public class RandomizePeople : MonoBehaviour
         string personality = personalities[Random.Range(0, personalities.Count)];
         bool isZombie = Random.Range(0, 2) == 1;
         Texture2D image = images[Random.Range(0, images.Count)];
-        Texture2D leftEye = leftEyes[Random.Range(0, leftEyes.Count)];
-        Texture2D rightEye = rightEyes[Random.Range(0, leftEyes.Count)];
+        Texture2D eye = eyes[Random.Range(0, eyes.Count)];
+        Texture2D jacket = jackets[Random.Range(0, jackets.Count)];
 
-        People.Imigrant person = new People.Imigrant(name, lastName, personality, isZombie, image, leftEye, rightEye);
+        People.Imigrant person = new People.Imigrant(name, lastName, personality, isZombie, image, eye, jacket);
         imigrants.Add(person);
     }
 }

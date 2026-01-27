@@ -6,6 +6,7 @@ public class RandomizePeople : MonoBehaviour
     [SerializeField] private List<string> names = new List<string>();
     [SerializeField] private List<string> lastNames = new List<string>();
     [SerializeField] private List<string> personalities = new List<string>();
+    [SerializeField] private List<Texture2D> images = new List<Texture2D>();
 
     private List<People.Imigrant> imigrants = new List<People.Imigrant>();
 
@@ -28,8 +29,9 @@ public class RandomizePeople : MonoBehaviour
         string lastName = lastNames[Random.Range(0, lastNames.Count)];
         string personality = personalities[Random.Range(0, personalities.Count)];
         bool isZombie = Random.Range(0, 2) == 1;
+        Texture2D image = images[Random.Range(0, images.Count)];
 
-        People.Imigrant person = new People.Imigrant(name, lastName, personality, isZombie);
+        People.Imigrant person = new People.Imigrant(name, lastName, personality, isZombie, image);
         imigrants.Add(person);
     }
 }

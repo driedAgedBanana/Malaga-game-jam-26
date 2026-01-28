@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 194663194}
+  - component: {fileID: 194663196}
   m_Layer: 5
   m_Name: NpcMiddle
   m_TagString: Untagged
@@ -154,54 +155,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &299523268
-GameObject:
+--- !u!222 &194663196
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 299523269}
-  - component: {fileID: 299523270}
-  m_Layer: 0
-  m_Name: Npc Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &299523269
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299523268}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.60302, y: 237.36029, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &299523270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299523268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fcc9defb0bc8b9479fed25c46946c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PeopleMovement
-  start: {fileID: 2140544014}
-  middle: {fileID: 194663194}
-  end: {fileID: 758150162}
-  npc: {fileID: 2790317722240316097, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+  m_GameObject: {fileID: 194663193}
+  m_CullTransparentMesh: 1
 --- !u!1 &758150161
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758150162}
+  - component: {fileID: 758150164}
   m_Layer: 5
   m_Name: NpcEnd
   m_TagString: Untagged
@@ -237,6 +199,14 @@ RectTransform:
   m_AnchoredPosition: {x: 704, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &758150164
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758150161}
+  m_CullTransparentMesh: 1
 --- !u!1 &1194419417
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +344,84 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1001 &1345947943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.6852
+      objectReference: {fileID: 0}
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 99.75074
+      objectReference: {fileID: 0}
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160929860443486332, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2790317722240316097, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: m_Name
+      value: Base NPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2790317722240316097, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1400696312}
+  m_SourcePrefab: {fileID: 100100000, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+--- !u!1 &1400696311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2790317722240316097, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+  m_PrefabInstance: {fileID: 1345947943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1400696312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400696311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcc9defb0bc8b9479fed25c46946c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PeopleMovement
+  npc: {fileID: 1400696311}
 --- !u!1001 &1715180240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -542,6 +590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2140544014}
+  - component: {fileID: 2140544016}
   m_Layer: 5
   m_Name: NpcStart
   m_TagString: Untagged
@@ -568,10 +617,18 @@ RectTransform:
   m_AnchoredPosition: {x: -559, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2140544016
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140544013}
+  m_CullTransparentMesh: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1194419420}
   - {fileID: 1715180240}
-  - {fileID: 299523269}
+  - {fileID: 1345947943}

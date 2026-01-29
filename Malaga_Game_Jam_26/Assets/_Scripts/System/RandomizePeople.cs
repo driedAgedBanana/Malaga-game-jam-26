@@ -11,7 +11,7 @@ public class RandomizePeople : MonoBehaviour
     [SerializeField] private List<TransformedImage> eyes = new List<TransformedImage>();
     [SerializeField] private List<TransformedImage> masks = new List<TransformedImage>();
     [SerializeField] private List<TransformedImage> jackets = new List<TransformedImage>();
-    private List<People.Imigrant> imigrants = new List<People.Imigrant>();
+    public List<People.Imigrant> imigrants = new List<People.Imigrant>();
 
     [SerializeField] private float immigrantAmount;
 
@@ -32,10 +32,10 @@ public class RandomizePeople : MonoBehaviour
         string lastName = lastNames[Random.Range(0, lastNames.Count)];
         string personality = personalities[Random.Range(0, personalities.Count)];
         bool isZombie = Random.Range(0, 2) == 1;
-        Texture2D image = bases[Random.Range(0, bases.Count)].Image;
-        Texture2D eye = eyes[Random.Range(0, eyes.Count)].Image;
-        Texture2D jacket = jackets[Random.Range(0, jackets.Count)].Image;
-        Texture2D mask = masks[Random.Range(0, jackets.Count)].Image;
+        Sprite image = bases[Random.Range(0, bases.Count)].Image;
+        Sprite eye = eyes[Random.Range(0, eyes.Count)].Image;
+        Sprite jacket = jackets[Random.Range(0, jackets.Count)].Image;
+        Sprite mask = masks[Random.Range(0, jackets.Count)].Image;
 
         People.Imigrant person = new People.Imigrant(name, lastName, personality, isZombie, image, eye, jacket, mask);
         imigrants.Add(person);
@@ -45,10 +45,10 @@ public class RandomizePeople : MonoBehaviour
 [System.Serializable]
 public record TransformedImage
 {
-    public Texture2D Image;
+    public Sprite Image;
     public Vector3 Scale;
     public Vector3 Position;
 
-    public TransformedImage(Texture2D image, Vector3 scale, Vector3 position)
+    public TransformedImage(Sprite image, Vector3 scale, Vector3 position)
         => (Image, Scale, Position) = (image, scale, position);
 }

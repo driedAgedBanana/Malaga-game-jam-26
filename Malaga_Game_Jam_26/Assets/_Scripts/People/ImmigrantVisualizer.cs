@@ -1,19 +1,35 @@
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class ImmigrantVisualizer : MonoBehaviour
 {
     [Header("References to object images")]
-    [SerializeField] private Image _baseImg;
-    [SerializeField] private Image _eyesImg;
-    [SerializeField] private Image _maskImg;
-    [SerializeField] private Image _clothingImg;
+    [SerializeField] private GameObject _immigrantParent;
+    [SerializeField] private GameObject[] _immigrants;
 
-    public void Visualize(People.Imigrant imigrant)
+    [SerializeField] private RandomizePeople _randomizePeople;
+    private GameObject displayedImmigrant = null;
+
+    bool usingDesignOne = true;
+
+    private void Start()
     {
-        _baseImg.image = imigrant.BaseImg;
-        _eyesImg.image = imigrant.Eyes;
-        _maskImg.image = imigrant.BaseImg;
-        _clothingImg.image = imigrant.Jacket;
+        Visualize();
+    }
+
+    public void Visualize()
+    {
+        if (displayedImmigrant != null) 
+        {
+            Destroy(displayedImmigrant);
+        }
+
+        GameObject objectToSpawn = usingDesignOne ? _immigrants[1] : _immigrants[0];
+        usingDesignOne = !usingDesignOne;
+
+        displayedImmigrant = Instantiate(objectToSpawn);
+
+        _immigrantParent.transform.parent = displayedImmigrant.transform;
+        displayedImmigrant.transform.localPosition = Vector3.zero;
     }
 }

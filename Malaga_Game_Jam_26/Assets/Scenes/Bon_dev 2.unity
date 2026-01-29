@@ -459,6 +459,10 @@ PrefabInstance:
       propertyPath: middlePoint
       value: 
       objectReference: {fileID: 90823103}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: baseNPCVisual
+      value: 
+      objectReference: {fileID: 1347645802903682650, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

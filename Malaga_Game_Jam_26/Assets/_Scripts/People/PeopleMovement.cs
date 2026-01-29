@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum NPCState
 {
@@ -37,6 +38,8 @@ public class PeopleMovement : MonoBehaviour
     public SpriteRenderer baseNPCVisual;
     public SpriteRenderer leftEyeVisual;
     public SpriteRenderer rightEyeVisual;
+
+    public UnityEvent OnOffScreen;
 
     private void Start()
     {
@@ -118,6 +121,7 @@ public class PeopleMovement : MonoBehaviour
         npc.transform.position = targetPosition.position;
         _moveCoroutine = null;
         onArrived?.Invoke();
+        OnOffScreen?.Invoke();
     }
 
 

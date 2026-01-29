@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-using static People;
 
 public class ImmigrantVisualizer : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class ImmigrantVisualizer : MonoBehaviour
     [SerializeField] private Image _maskImg;
     [SerializeField] private Image _clothingImg;
 
-    public void Visualize(Imigrant imigrant)
+    public void Visualize(People.Imigrant imigrant)
     {
         _baseImg.image = imigrant.BaseImg;
         _eyesImg.image = imigrant.Eyes;

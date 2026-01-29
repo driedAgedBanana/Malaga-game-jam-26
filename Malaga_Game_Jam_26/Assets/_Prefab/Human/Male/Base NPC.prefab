@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160929860443486332}
   - component: {fileID: 1347645802903682650}
-  - component: {fileID: 6764910403808289533}
+  - component: {fileID: 6101210319353286930}
   m_Layer: 0
   m_Name: Base NPC
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.33725286, y: -0.062440872, z: 0}
-  m_LocalScale: {x: 26.341286, y: 26.341286, z: 26.341286}
+  m_LocalScale: {x: 72.7506, y: 72.7506, z: 72.7506}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9142693982790074964}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3492455332563880977, guid: 8e1f61b9688f3c0499ee5b8f90f7fc20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,28 +93,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6764910403808289533
-Animator:
-  serializedVersion: 7
+--- !u!114 &6101210319353286930
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2790317722240316097}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4c57121d591173042a369bf8cfbdeb82, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcc9defb0bc8b9479fed25c46946c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PeopleMovement
+  npc: {fileID: 2790317722240316097}
+  startPoint: {fileID: 0}
+  middlePoint: {fileID: 0}
+  endPoint: {fileID: 0}
+  speed: 150
+  baseNPC: {fileID: 0}
+  leftEye: {fileID: 0}
+  rightEye: {fileID: 0}
+  baseNPCVisual: {fileID: 1347645802903682650}
+  leftEyeVisual: {fileID: 3751888488092333482}
+  rightEyeVisual: {fileID: 3718504618573818411}
 --- !u!1 &7646014096386290472
 GameObject:
   m_ObjectHideFlags: 0

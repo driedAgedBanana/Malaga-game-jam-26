@@ -1,5 +1,15 @@
 using System.Collections;
+using System.Net.NetworkInformation;
 using UnityEngine;
+
+public enum NPCState
+{
+    IdleAtStart,      // Waiting to be called
+    MovingToMiddle,   // Being called
+    WaitingDecision,  // Player can accept/reject
+    LeavingAccepted,  // Going to end point (right side)
+    LeavingRejected   // Going back to start
+}
 
 public class PeopleMovement : MonoBehaviour
 {
@@ -15,6 +25,9 @@ public class PeopleMovement : MonoBehaviour
     public float speed = 5f;
     private bool _isMoving = false;
     private Coroutine _moveCoroutine;
+    private bool _npcWaitingForDecision = false;
+    private NPCState _state = NPCState.IdleAtStart;
+
 
     [Header("Visuals")]
     public SpriteRenderer baseNPC;
@@ -38,27 +51,47 @@ public class PeopleMovement : MonoBehaviour
 
     public void CallingNPCOnStart()
     {
-        if (_moveCoroutine != null) return;
-        _moveCoroutine = StartCoroutine(MovingNPC(middlePoint));
+        if (_state != NPCState.IdleAtStart) return;
+
+        _state = NPCState.MovingToMiddle;
+
+        _moveCoroutine = StartCoroutine(MovingNPC(middlePoint, () =>
+        {
+            _state = NPCState.WaitingDecision;
+        }));
 
         EnableVisual();
     }
 
     public void AcceptNPC()
     {
-        if (_moveCoroutine != null) return;
-        _moveCoroutine = StartCoroutine(MovingNPC(endPoint));
+        if (_state != NPCState.WaitingDecision) return;
 
-        Invoke(nameof(DisableVisual), 3f);
+        _state = NPCState.LeavingAccepted;
+
+        _moveCoroutine = StartCoroutine(MovingNPC(endPoint, () =>
+        {
+            // Instantly reset NPC back to start after exiting right
+            npc.transform.position = startPoint.position;
+            DisableVisual();
+            _state = NPCState.IdleAtStart;
+        }));
     }
+
 
     public void RejectNPC()
     {
-        if (_moveCoroutine != null) return;
-        _moveCoroutine = StartCoroutine(MovingNPC(startPoint));
+        if (_state != NPCState.WaitingDecision) return;
 
-        Invoke(nameof(DisableVisual), 1.5f);
+        _state = NPCState.LeavingRejected;
+
+        _moveCoroutine = StartCoroutine(MovingNPC(startPoint, () =>
+        {
+            DisableVisual();
+            _state = NPCState.IdleAtStart;
+        }));
     }
+
 
     public void MoveNPC(Transform targetPosition)
     {
@@ -70,17 +103,23 @@ public class PeopleMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator MovingNPC(Transform targetPosition)
+    private IEnumerator MovingNPC(Transform targetPosition, System.Action onArrived = null)
     {
         while (Vector3.Distance(npc.transform.position, targetPosition.position) > 0.01f)
         {
-            npc.transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, speed * Time.deltaTime);
+            npc.transform.position = Vector3.MoveTowards(
+                npc.transform.position,
+                targetPosition.position,
+                speed * Time.deltaTime);
+
             yield return null;
         }
 
-        transform.position = targetPosition.position;
+        npc.transform.position = targetPosition.position;
         _moveCoroutine = null;
+        onArrived?.Invoke();
     }
+
 
     private void EnableVisual()
     {

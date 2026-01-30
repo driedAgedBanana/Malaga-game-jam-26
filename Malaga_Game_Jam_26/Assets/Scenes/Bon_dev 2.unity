@@ -456,13 +456,85 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1038324399}
     - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: visualizer
+      value: 
+      objectReference: {fileID: 1820549235}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
       propertyPath: middlePoint
       value: 
       objectReference: {fileID: 90823103}
     - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
       propertyPath: baseNPCVisual
       value: 
-      objectReference: {fileID: 1347645802903682650, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      objectReference: {fileID: 1400696314}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: leftEyeVisual
+      value: 
+      objectReference: {fileID: 1478737665}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: rightEyeVisual
+      value: 
+      objectReference: {fileID: 2004293442}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[0].Eyes
+      value: 
+      objectReference: {fileID: 2800000, guid: ff046e434693a7345b0a678ce72d0dd0, type: 3}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[1].Eyes
+      value: 
+      objectReference: {fileID: 2800000, guid: 1f779225fea28b148ae1dcbd215653f5, type: 3}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[0].Jacket
+      value: 
+      objectReference: {fileID: 2800000, guid: 48559d174f7b52b4bbb914aeae9652e8, type: 3}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[1].Jacket
+      value: 
+      objectReference: {fileID: 2800000, guid: 48559d174f7b52b4bbb914aeae9652e8, type: 3}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[0].BaseImg
+      value: 
+      objectReference: {fileID: 2800000, guid: 8e1f61b9688f3c0499ee5b8f90f7fc20, type: 3}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[1].BaseImg
+      value: 
+      objectReference: {fileID: 2800000, guid: 9c25e29a1f0a37948b8b3aaa7fde97f6, type: 3}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[0].LastName
+      value: Doe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[1].LastName
+      value: Brood
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[0].FirstName
+      value: John
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[1].FirstName
+      value: Jan
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[0].Personality
+      value: Neutral
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: immigrantPool.Array.data[1].Personality
+      value: Neutral
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: OnOffScreen.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101210319353286930, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
+      propertyPath: OnOffScreen.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -776,6 +848,7 @@ GameObject:
   - component: {fileID: 1820549237}
   - component: {fileID: 1820549236}
   - component: {fileID: 1820549235}
+  - component: {fileID: 1820549238}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -823,6 +896,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1820549238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820549234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba71bc2f03ca5f448a214ad169b237d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomizePeople
+  names:
+  - John
+  lastNames:
+  - Doe
+  personalities:
+  - Neutral
+  bases:
+  - Image: {fileID: 2800000, guid: 8e1f61b9688f3c0499ee5b8f90f7fc20, type: 3}
+    Scale: {x: 0, y: 0, z: 0}
+    Position: {x: 0, y: 0, z: 0}
+  - Image: {fileID: 2800000, guid: 9c25e29a1f0a37948b8b3aaa7fde97f6, type: 3}
+    Scale: {x: 0, y: 0, z: 0}
+    Position: {x: 0, y: 0, z: 0}
+  eyes:
+  - Image: {fileID: 2800000, guid: ff046e434693a7345b0a678ce72d0dd0, type: 3}
+    Scale: {x: 0, y: 0, z: 0}
+    Position: {x: 0, y: 0, z: 0}
+  - Image: {fileID: 2800000, guid: 1f779225fea28b148ae1dcbd215653f5, type: 3}
+    Scale: {x: 0, y: 0, z: 0}
+    Position: {x: 0, y: 0, z: 0}
+  masks:
+  - Image: {fileID: 2800000, guid: 8e6e8cc4166f0ac45a4c024cc16f822f, type: 3}
+    Scale: {x: 0, y: 0, z: 0}
+    Position: {x: 0, y: 0, z: 0}
+  jackets:
+  - Image: {fileID: 2800000, guid: 48559d174f7b52b4bbb914aeae9652e8, type: 3}
+    Scale: {x: 0, y: 0, z: 0}
+    Position: {x: 0, y: 0, z: 0}
+  immigrantAmount: 1
 --- !u!212 &2004293442 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3718504618573818411, guid: eb7b84d3653befa4e9c626a26fd02d41, type: 3}
